@@ -1,95 +1,73 @@
-void setup() {
-  pinMode(2, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
-  pinMode(6, OUTPUT);
-  pinMode(7, OUTPUT);
-  pinMode(8, OUTPUT);
-  pinMode(9, OUTPUT);
-  pinMode(10, OUTPUT);
+// ================================
+// Traffic Light 2 Arah
+// Animasi seperti lampu lalu lintas asli
+// ================================
 
-  digitalWrite(2, HIGH);
-  digitalWrite(3, LOW);
-  digitalWrite(4, LOW);
-  digitalWrite(5, HIGH);
-  digitalWrite(6, LOW);
-  digitalWrite(7, LOW);
-  digitalWrite(8, HIGH);
-  digitalWrite(9, LOW);
-  digitalWrite(10, LOW);
-  delay(2000);
-  digitalWrite(2, LOW);
-  digitalWrite(3, HIGH);
-  digitalWrite(4, LOW);
-  digitalWrite(5, HIGH);
-  digitalWrite(6, LOW);
-  digitalWrite(7, LOW);
-  digitalWrite(8, HIGH);
-  digitalWrite(9, LOW);
-  digitalWrite(10, LOW);
-  delay(1000);
+const int merahA = 2;
+const int kuningA = 3;
+const int hijauA = 4;
+
+const int merahB = 5;
+const int kuningB = 6;
+const int hijauB = 7;
+
+void setup() {
+  pinMode(merahA, OUTPUT);
+  pinMode(kuningA, OUTPUT);
+  pinMode(hijauA, OUTPUT);
+
+  pinMode(merahB, OUTPUT);
+  pinMode(kuningB, OUTPUT);
+  pinMode(hijauB, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(2, LOW);
-  digitalWrite(3, LOW);
-  digitalWrite(4, HIGH);
-  digitalWrite(5, HIGH);
-  digitalWrite(6, LOW);
-  digitalWrite(7, LOW);
-  digitalWrite(8, HIGH);
-  digitalWrite(9, LOW);
-  digitalWrite(10, LOW);
-  delay(3000);
-  digitalWrite(2, LOW);
-  digitalWrite(3, HIGH);
-  digitalWrite(4, LOW);
-  digitalWrite(5, LOW);
-  digitalWrite(6, HIGH);
-  digitalWrite(7, LOW);
-  digitalWrite(8, HIGH);
-  digitalWrite(9, LOW);
-  digitalWrite(10, LOW);
+
+  digitalWrite(hijauA, HIGH);
+  digitalWrite(kuningA, LOW);
+  digitalWrite(merahA, LOW);
+
+  digitalWrite(merahB, HIGH);
+  digitalWrite(kuningB, LOW);
+  digitalWrite(hijauB, LOW);
+
+  delay(5000);
+
+  digitalWrite(hijauA, LOW);
+  digitalWrite(kuningA, HIGH);
+
+  delay(2000);
+
+  digitalWrite(kuningA, LOW);
+  digitalWrite(merahA, HIGH);
+
+  digitalWrite(merahB, HIGH);
+  digitalWrite(kuningB, HIGH);
+
   delay(1000);
-  digitalWrite(2, HIGH);
-  digitalWrite(3, LOW);
-  digitalWrite(4, LOW);
-  digitalWrite(5, LOW);
-  digitalWrite(6, LOW);
-  digitalWrite(7, HIGH);
-  digitalWrite(8, HIGH);
-  digitalWrite(9, LOW);
-  digitalWrite(10, LOW);
-  delay(3000);
-  digitalWrite(2, HIGH);
-  digitalWrite(3, LOW);
-  digitalWrite(4, LOW);
-  digitalWrite(5, LOW);
-  digitalWrite(6, HIGH);
-  digitalWrite(7, LOW);
-  digitalWrite(8, LOW);
-  digitalWrite(9, HIGH);
-  digitalWrite(10, LOW);
+
+  digitalWrite(merahB, LOW);
+  digitalWrite(kuningB, LOW);
+  digitalWrite(hijauB, HIGH);
+
+  delay(5000);
+
+  digitalWrite(hijauB, LOW);
+  digitalWrite(kuningB, HIGH);
+
+  delay(2000);
+
+  digitalWrite(kuningB, LOW);
+  digitalWrite(merahB, HIGH);
+
+  digitalWrite(merahA, HIGH);
+  digitalWrite(kuningA, HIGH);
+
   delay(1000);
-  digitalWrite(2, HIGH);
-  digitalWrite(3, LOW);
-  digitalWrite(4, LOW);
-  digitalWrite(5, HIGH);
-  digitalWrite(6, LOW);
-  digitalWrite(7, LOW);
-  digitalWrite(8, LOW);
-  digitalWrite(9, LOW);
-  digitalWrite(10, HIGH);
-  delay(3000);
-  digitalWrite(2, LOW);
-  digitalWrite(3, HIGH);
-  digitalWrite(4, LOW);
-  digitalWrite(5, HIGH);
-  digitalWrite(6, LOW);
-  digitalWrite(7, LOW);
-  digitalWrite(8, LOW);
-  digitalWrite(9, HIGH);
-  digitalWrite(10, LOW);
-  delay(1000);
+
+  digitalWrite(merahA, LOW);
+  digitalWrite(kuningA, LOW);
+  digitalWrite(hijauA, HIGH);
+
+  delay(5000);
 }
